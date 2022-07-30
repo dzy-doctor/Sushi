@@ -42,8 +42,10 @@ body{
 }
  * {
      box-sizing: border-box;
+     
  }
 
+ 
 
  
 .project{
@@ -52,32 +54,259 @@ body{
     margin: 0 auto;
     display: flex;
 }
+/* left-bar ===================================================*/
 .left-bar{
+
+
     width: 320px;
     background-color: aqua;
-    height: 50px;
-    border: 1px solid aqua;
+    height: 100%;
+    
 }
-.right-bar{
-    width: 430px;
-    height: 50px;
-    background-color: burlywood;
-    border: 1px solid burlywood;
+.left-bar__logo{
+    width: 130px;
+    height: 141.67px;
+    margin-left: 125px;
+    border: 1px solid red;
+    background: url(./img/logo.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    
 }
+.left-bar__subtitle{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #000000;
+    margin-left: 125px;
+}
+
+
+/* main ======================================================*/
 .main{
     width: 1170px;
     height: 2295px;
     background: #F2F2F2;
 }
+.header{
+    height: 94.5px;
+    width: 100%;
+    border-bottom: 0.5px solid #A4ACAD;
+    display: flex;
+}
+.header__contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+
+    width: 220px;
+    height: 100%;
+
+    border-right: 0.5px solid #A4ACAD;
+}
+.contact-text{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+}
+.header__contact-telephone{  
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+
+    color: #FF9846;
+}
+.contact__time{
+    margin-top: 5px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #A4ACAD;
+}
+.header__wrap{
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between; 
+    
+}
+.header__wrap-city{
+    padding-top: 26px;
+     
+}
+.header__wrap-city {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #A4ACAD;
+}
+.city{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+    cursor: pointer;
+}
+.header__wrap-content{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+}
+.header__comment {
+   margin-right: 10px;
+
+   font-style: normal;
+   font-weight: 400;
+   font-size: 18px;
+   line-height: 22px;  
+
+   cursor: pointer;
+   
+}
+.header__render{
+    margin-right: 70px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+
+    cursor: pointer;
+}
+.fas.fa-search{
+    margin-right: 40px;
+    color: #ccc;
+    cursor: pointer;
+        
+  }
+.fas.fa-search:hover{
+    color:red;
+  }
+.orang:hover{
+    color: #FF9846;
+}
+.main-content{
+    width: 950px;
+    height: 470px;
+
+    margin: auto;
+}
+.main-banner{
+
+}
+/* right-bar========================================== */
 
 
+.right-bar{
+    width: 430px;
+    height: 100%;
+    
+    
+}
+.right-bar__basket{
+    width: 290px;
+    height: 140px;
 
+    background: #F2F2F2;
+    color: #A4ACAD;
+    border-radius: 5px; 
 
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
 
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
 
+    margin-top: 55px;
+    margin-left: 40px;
+}
+.right-bar__basket h2{ 
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
 
+    margin-top: 12px;
+    margin-bottom: 10px;
 
+    color: #000000;
+}
+.right-bar__btn{
+    width: 290px;
+    height: 40px;
 
+    margin-top: 26px;
 
+    background: #FF9846;
+    border-radius: 0px 0px 5px 5px; 
 
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    
+    color: #F2F2F2;
+}
+.right-bar__map{
+    width: 290px;
+    height: 223px;
 
+    background: #F2F2F2;
+    border-radius: 5px;
+
+    margin-top: 20px;
+    margin-left: 40px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+
+}
+.map-ellipse{ /* поправить убрать чать кода , оптимизировать  */
+    position: absolute;
+    margin-top: 86px;
+
+    cursor: pointer;
+}
+.map-ellipse-vector{ /* поправить убрать чать кода , оптимизировать  */
+    position: absolute;
+    margin-top: 97px;
+    cursor: pointer;
+}
+.map-ellipse-one{ /* поправить убрать чать кода , оптимизировать  */
+    position: absolute;
+    margin-top: 102px;
+    cursor: pointer;
+}
+.map-subtext{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    color: #000000;
+
+    margin-top: 38px;
+    
+}
+.map-text{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: #A4ACAD;
+    margin-top: 10px;
+
+}
