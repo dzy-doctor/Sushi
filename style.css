@@ -102,7 +102,7 @@ body{
     align-items: center; 
     text-align: center;
 
-    width: 220px;
+    width: 268px;
     height: 100%;
 
     border-right: 0.5px solid #A4ACAD;
@@ -127,6 +127,9 @@ body{
     line-height: 17px;
 
     color: #A4ACAD;
+}
+.contact__time img{
+    padding: 1px 5px 0 0;
 }
 .header__wrap{
     width: 100%;
@@ -198,10 +201,92 @@ body{
     height: 470px;
 
     margin: auto;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    
+   
 }
 .main-banner{
+    margin:30px 0 11px 0;
+}
+.slider-dots{
+    display: flex;
+    
+    
+}
+.dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 12px;
+    background: #A4ACAD;
+    cursor: pointer;
+}
+.dot:hover{
+    background: #FF9846;
+}
+/* section =============================*/
+section{ /*Оптимизировать*/
+    display: flex;
+    flex-wrap: wrap;
+        
+    width: 950px;
+    height: 470px;
+
+    margin: 31px 0 24px 0;
 
 }
+article{
+    position: relative;
+    cursor: pointer;
+    
+}
+article:first-child{
+    margin-left: 0;
+    margin-bottom:30px ;
+    
+}
+article:nth-child(2){
+    margin-left: 30px;
+
+}
+article:nth-child(3){
+    margin-left: 20px;
+
+}
+article:nth-child(5){
+    margin-left: 30px;
+
+}
+.text{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    color: #FFFFFF;
+
+    position: absolute;
+    left: 10px;
+    top: 160px;
+}
+.offer{
+    
+    width: 100%;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+}
+.offer span{
+    cursor: pointer;
+}
+.pop{
+    margin-left: 30px;
+    text-decoration-line: underline;
+    color: #A4ACAD;
+}
+
+
 /* right-bar========================================== */
 
 
