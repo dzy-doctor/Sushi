@@ -44,9 +44,6 @@ body{
      box-sizing: border-box;
      
  }
-
- 
-
  
 .project{
     width: 1930px;/*вернуть 1920*/
@@ -83,13 +80,13 @@ body{
     margin-left: 125px;
 }
 
-
 /* main ======================================================*/
 .main{
     width: 1170px;
     height: 2295px;
     background: #F2F2F2;
 }
+/* header ====================================================*/
 .header{
     height: 94.5px;
     width: 100%;
@@ -102,7 +99,7 @@ body{
     align-items: center; 
     text-align: center;
 
-    width: 268px;
+    width: 268px; /* посмотерть что с отступами  идет искажение должно быть 220px*/
     height: 100%;
 
     border-right: 0.5px solid #A4ACAD;
@@ -140,6 +137,7 @@ body{
 }
 .header__wrap-city{
     padding-top: 26px;
+    padding: 27px;
      
 }
 .header__wrap-city {
@@ -160,42 +158,103 @@ body{
 .header__wrap-content{
     display: flex;
     align-items: center;
-    text-align: center;
+    text-align: center; 
+     
+}
+a {
+    text-decoration: none;
+}  
+ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;    
+}  
+li {
+    color: #111111;
+    display: block;
+    float: left;
+    padding: 1rem; 
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px; 
+        
+}    
+li a {
+    color: #111111;
+}
+li a:hover{
+    color: #F46D40;
+}  
+li:hover,
+li:focus-within {  
+    cursor: pointer;
+}  
+li:focus-within a {
+    outline: none;
+}  
+ul li ul {  
+    visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+    left: 0;
+    display: none;    
+}
+ul li ul li:nth-child(2) {
+    border-bottom: 0.5px solid #A4ACAD;
+    width: 180px;
     
+    
+}  
+ul li:hover > ul,
+ul li:focus-within > ul,
+ul li ul:hover,
+ul li ul:focus {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    width: 205px; /* поправить размер должен быть 198px*/
+    height: 310px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 18px 6px rgba(0, 0, 0, 0.09);
+    border-radius: 15px 15px 0px 0px;    
+    line-height: 10px;
+    text-align:left;
+    
+} 
+ul li ul li {
+    clear: both;
+    width: 100%;    
+}
+.sorting{
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px; 
+    color: #A4ACAD;
 }
 .header__comment {
    margin-right: 10px;
-
-   font-style: normal;
-   font-weight: 400;
-   font-size: 18px;
-   line-height: 22px;  
-
-   cursor: pointer;
-   
+   background: #F2F2F2;   
 }
 .header__render{
     margin-right: 70px;
-
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
-
-    cursor: pointer;
-}
+    background: #F2F2F2;    
+} 
 .fas.fa-search{
-    margin-right: 40px;
+    padding-right: 40px;
     color: #ccc;
-    cursor: pointer;
-        
-  }
+    cursor: pointer;         
+}
 .fas.fa-search:hover{
     color:red;
-  }
-.orang:hover{
-    color: #FF9846;
-}
+} 
+/* main-content=================================== */
+
 .main-content{
     width: 950px;
     height: 470px;
@@ -226,6 +285,7 @@ body{
 .dot:hover{
     background: #FF9846;
 }
+
 /* section =============================*/
 section{ /*Оптимизировать*/
     display: flex;
@@ -270,8 +330,7 @@ article:nth-child(5){
     left: 10px;
     top: 160px;
 }
-.offer{
-    
+.offer{    
     width: 100%;
     font-weight: 500;
     font-size: 24px;
@@ -286,9 +345,7 @@ article:nth-child(5){
     color: #A4ACAD;
 }
 
-
 /* right-bar========================================== */
-
 
 .right-bar{
     width: 430px;
