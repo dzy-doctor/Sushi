@@ -31,7 +31,7 @@ button{cursor: pointer;}
 button::-moz-focus-inner {padding:0;border:0;}
 a, a:visited{text-decoration: none;}
 a:hover{text-decoration: none;}
-ul li{list-style: none;}
+/* ul li{list-style: none;} */
 img{vertical-align: top;}
 
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
@@ -46,16 +46,14 @@ body{
  }
  
 .project{
-    width: 1930px;/*вернуть 1920*/
-    height: 2295px;
+    max-width: 1930px;/*вернуть 1920*/
+     /* 2295 px*/
     margin: 0 auto;
     display: flex;
 }
 /* left-bar ===================================================*/
 .left-bar{
-
-
-    width: 320px;
+    width: 320px;  /*320px*/
     background-color: aqua;
     height: 100%;
     
@@ -82,9 +80,10 @@ body{
 
 /* main ======================================================*/
 .main{
-    width: 1170px;
+    width: 1170px; /*1170px*/
     height: 2295px;
     background: #F2F2F2;
+   
 }
 /* header ====================================================*/
 .header{
@@ -161,7 +160,19 @@ body{
     text-align: center; 
      
 }
-a {
+.header__wrap-content >div>a {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    
+}
+.header__wrap-content >div>a:hover{
+    color: #FF9846;
+}
+
+
+/* a {  Выпадающее меню
     text-decoration: none;
 }  
 ul {
@@ -210,15 +221,15 @@ ul li ul li:nth-child(2) {
     width: 180px;
     
     
-}  
-ul li:hover > ul,
+}   */
+/* ul li:hover > ul,
 ul li:focus-within > ul,
 ul li ul:hover,
 ul li ul:focus {
     visibility: visible;
     opacity: 1;
     display: block;
-    width: 205px; /* поправить размер должен быть 198px*/
+    width: 205px; /* поправить размер должен быть 198px
     height: 310px;
     background: #FFFFFF;
     box-shadow: 0px 0px 18px 6px rgba(0, 0, 0, 0.09);
@@ -230,21 +241,27 @@ ul li ul:focus {
 ul li ul li {
     clear: both;
     width: 100%;    
-}
-.sorting{
+} */
+/* .sorting{
     font-weight: 300;
     font-size: 14px;
     line-height: 17px; 
     color: #A4ACAD;
+} */
+
+.header__comment >a{
+    margin-right: 10px;   
+    text-decoration: none; 
+    color: #111111;
+   
 }
-.header__comment {
-   margin-right: 10px;
-   background: #F2F2F2;   
-}
-.header__render{
-    margin-right: 70px;
-    background: #F2F2F2;    
+.header__render >a{
+
+     text-decoration: none; 
+    margin-right: 70px; /*Проверить отступ*/
+    color: #111111;
 } 
+
 .fas.fa-search{
     padding-right: 40px;
     color: #ccc;
@@ -256,7 +273,7 @@ ul li ul li {
 /* main-content=================================== */
 
 .main-content{
-    width: 950px;
+    width: 950px; /*950px*/
     height: 470px;
 
     margin: auto;
@@ -266,12 +283,11 @@ ul li ul li {
     
    
 }
-.main-banner{
+.main-banner{    
     margin:30px 0 11px 0;
 }
 .slider-dots{
-    display: flex;
-    
+    display: flex;    
     
 }
 .dot{
@@ -345,10 +361,128 @@ article:nth-child(5){
     color: #A4ACAD;
 }
 
+/* content__product =========================================*/
+.content__product{
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+    
+}
+.product__box{
+    width: 289px;
+    height: 397px;
+    
+    
+    background: #FFFFFF;   
+}
+.product__img{
+    padding: 0 18px; 
+}
+.product__titl{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    margin-top: 30px; /* Проверить отступы по ленейке*/
+    padding-left: 17px; /* Проверить отступы по ленейке*/
+    
+}
+.product__description{
+    padding: 30px 0 0 17px;/* Проверить отступы по ленейке*/
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    color: #A4ACAD;
+
+}
+.product__wrap{
+    width: 100%;
+    border-top: 0.5px solid #A4ACAD;
+    margin-top: 20px; /* Проверить отступы по ленейке*/
+    
+}
+.product__price{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    padding: 17px 5px 0 18px; /* проверить отступы*/
+}
+.product__btn{
+    width: 143px;
+    height: 40px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    color: #F2F2F2;
+    background: #F46D40;
+    border-radius: 5px;
+    margin-top: 11px; /* Проверить отступы по ленейке*/
+}
+/* btn__slider======================================= */
+.btn__slider{
+    /* display: flex;
+    justify-content: space-between; */
+    position: absolute;
+    top: 1348px;
+}
+
+.btn__slider-right{
+    left: 1103px;
+    position: absolute;
+    
+  
+    
+}
+/* content__presentation ========================================= */
+
+.content__presentation{
+    margin-top: 50px; /* Проверить отступы*/
+    color: #A4ACAD;
+    font-size: 18px;
+    line-height: 100%;
+   
+    font-style: normal;
+    font-weight: 400;
+    
+
+}
+.presentation__titl{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+
+
+    line-height: 30px;
+    
+}
+.presentation__text{
+    padding-top: 10px;
+   
+    
+
+}
+.presentation__text-indent{
+   
+    padding-left: 25px;
+ 
+}
+.presentation__text-bac{
+    /* opacity: 0.2; */
+    border: 1px solid red;
+    background: linear-gradient(180deg, rgba(242, 242, 242, 0) 0%, #F2F2F2 100%);
+}
+
+
 /* right-bar========================================== */
 
 .right-bar{
-    width: 430px;
+    width: 22%;/*430px*/
     height: 100%;
     
     
