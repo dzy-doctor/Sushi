@@ -356,7 +356,7 @@ font-size: larger;
     display: flex;
     flex-direction: column; 
     align-items: center;
-    border: 1px solid red;
+    
        
 }
 .main-banner{    
@@ -391,10 +391,28 @@ font-size: larger;
     margin: 31px 0 24px 0;
 
 }
-article{        
+.main__box{
+    
+}
+.main__box-img{
+   display: inline-block; /* Строчно-блочный элемент */
+   overflow: hidden; /* Скрываем всё за контуром */ 
+    
+}
+.main__box-img img{
+    transition: 1s; /* Время эффекта */
+    display: block;
+}
+.main__box-img img:hover{
+    overflow: hidden;
+    transform: scale(1.2); 
+}
+
+article{            
     position: relative;     
     
 }
+
 .section__two{
     width: 470px;
     display: flex;
@@ -517,7 +535,7 @@ position: relative;
     width: 100%;
     position: absolute;  
     top: 1340px;
-    border: 1px solid red;
+    
     z-index: 100;
 }
 
@@ -586,20 +604,19 @@ position: relative;
     font-size: 24px;
     line-height: 100%;
     color: #F46D40;
-
+    padding-top: 30px;
 }
-
+/* footer ===========================*/
 .footer {
     margin-top: 60px; 
-    /* margin-left: auto;
-    margin-right: auto; */
     width: 100%;
     height: 170px; 
+    border-top: 0.5px solid rgba(164, 172, 173, 1);
 }
 
 .footer_wrapper {
     display: flex;
-    border-top: 0.5px solid rgba(164, 172, 173, 1);
+    
     justify-content: space-between;
     width: 90%;
     height: 100%;
@@ -611,7 +628,7 @@ position: relative;
 .footer_wrapper div {
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
+   
     
 }
 .footer_wrapper_documents{
@@ -619,7 +636,7 @@ position: relative;
 }
 .footer_wrapper_documents_content{
     margin-bottom:8%;
-    border: 1px solid red;
+    
 }
 
 .footer_wrapper_documents_content:hover {
@@ -628,7 +645,7 @@ position: relative;
 
 .footer_wrapper_line{
     border-left: 0.5px solid rgba(164, 172, 173, 1) ;
-    height:100% ;
+    height:247px;
 }
 
 
@@ -661,11 +678,14 @@ position: relative;
 }
 
 .footer_wrapper_socialWebs_logos {
+    
+    
     padding-top: 10px;
+    
     flex-direction: row !important;
-    justify-content: space-evenly !important;
-}
+    justify-content: space-between !important;
 
+}
 
 .footer_wrapper_socialWebs button {
     box-sizing: border-box;
